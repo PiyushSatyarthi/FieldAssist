@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-charcoal-800;
+  }
+  
+  body {
+    @apply bg-charcoal-950 text-text-primary font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  /* High contrast focus states for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-amber-muted;
+  }
+}
+
+@layer components {
+  /* Scrollbar styling for dark theme */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-charcoal-900;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-charcoal-700 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-charcoal-600;
+  }
+  
+  /* Section headers */
+  .section-header {
+    @apply text-lg font-semibold text-text-primary mb-3 mt-6 first:mt-0;
+  }
+  
+  /* Danger/warning emphasis */
+  .danger-section {
+    @apply border-l-4 border-danger bg-danger-dark/10 pl-4 py-3 my-4;
+  }
+  
+  .warning-section {
+    @apply border-l-4 border-amber-muted bg-amber-dark/10 pl-4 py-3 my-4;
+  }
+  
+  /* Code/monospace text */
+  .mono-text {
+    @apply font-mono text-sm bg-charcoal-900 px-2 py-1 rounded;
+  }
+}
+

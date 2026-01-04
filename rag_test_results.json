@@ -1,0 +1,50 @@
+[
+  {
+    "test": "Massive bleeding \u2013 arterial",
+    "passed": false,
+    "errors": [
+      "Missing cross-RAG trigger"
+    ],
+    "retrieved_files": [
+      "medical/emergency.md"
+    ]
+  },
+  {
+    "test": "Food poisoning + dehydration",
+    "passed": false,
+    "errors": [
+      "Wrong primary RAG",
+      "Missing cross-RAG trigger"
+    ],
+    "retrieved_files": [
+      "medical/emergency.md"
+    ]
+  },
+  {
+    "test": "Hypothermia exposure",
+    "passed": false,
+    "errors": [
+      "Wrong primary RAG",
+      "Missing cross-RAG trigger"
+    ],
+    "retrieved_files": [
+      "medical/emergency.md"
+    ]
+  },
+  {
+    "test": "Myth test \u2013 urine wound cleaning",
+    "passed": true,
+    "errors": [],
+    "retrieved_files": [
+      "medical/emergency.md"
+    ]
+  },
+  {
+    "test": "Panic ambiguity test",
+    "passed": true,
+    "errors": [],
+    "retrieved_files": [
+      "medical/emergency.md"
+    ]
+  }
+]

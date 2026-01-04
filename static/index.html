@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFLINE SURVIVAL AI | SYSTEM ONLINE</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="scanlines"></div>
+        <div class="grid-overlay"></div>
+        <div class="particles"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <div class="pulse-ring"></div>
+                        <div class="core"></div>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="title">OFFLINE SURVIVAL AI</h1>
+                        <p class="subtitle">SYSTEM STATUS: <span class="status-online">OPERATIONAL</span></p>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">POWER</span>
+                        <span class="stat-value">100%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">DATABASE</span>
+                        <span class="stat-value">SYNCED</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">NETWORK</span>
+                        <span class="stat-value offline">OFFLINE</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Navigation Panel -->
+            <div class="panel navigation-panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">
+                        <span class="icon">🗺️</span>
+                        NAVIGATION SYSTEM
+                    </h2>
+                    <div class="panel-status"></div>
+                </div>
+                <div class="panel-content">
+                    <div class="nav-form">
+                        <div class="form-group">
+                            <label class="form-label">START COORDINATES</label>
+                            <div class="coord-inputs">
+                                <input type="number" id="start-lat" class="coord-input" placeholder="Latitude" step="0.0001">
+                                <input type="number" id="start-lon" class="coord-input" placeholder="Longitude" step="0.0001">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">DESTINATION COORDINATES</label>
+                            <div class="coord-inputs">
+                                <input type="number" id="end-lat" class="coord-input" placeholder="Latitude" step="0.0001">
+                                <input type="number" id="end-lon" class="coord-input" placeholder="Longitude" step="0.0001">
+                            </div>
+                        </div>
+                        <button id="navigate-btn" class="btn-primary">
+                            <span class="btn-text">CALCULATE ROUTE</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                    </div>
+                    <div id="navigation-result" class="result-box hidden"></div>
+                </div>
+            </div>
+
+            <!-- AI Assistant Panel -->
+            <div class="panel ai-panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">
+                        <span class="icon">🤖</span>
+                        SURVIVAL ASSISTANT
+                    </h2>
+                    <div class="panel-status"></div>
+                </div>
+                <div class="panel-content">
+                    <div class="chat-container">
+                        <div id="chat-messages" class="chat-messages">
+                            <div class="system-message">
+                                <div class="message-header">
+                                    <span class="message-sender">SYSTEM</span>
+                                    <span class="message-time"></span>
+                                </div>
+                                <div class="message-content">
+                                    <p>Survival AI initialized. All knowledge bases loaded. Ready for queries.</p>
+                                    <p class="warning-text">⚠️ This system provides guidance only. Not a replacement for professional medical care.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <input 
+                                type="text" 
+                                id="question-input" 
+                                class="chat-input" 
+                                placeholder="Enter your survival question..."
+                                autocomplete="off"
+                            >
+                            <button id="ask-btn" class="btn-send">
+                                <span class="btn-icon">▶</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <span class="footer-label">KNOWLEDGE BASE:</span>
+                    <span class="footer-value">Medical | Food & Water | Shelter | Security | Tools | Navigation | Communication | Psychology</span>
+                </div>
+                <div class="footer-section">
+                    <span class="footer-label">VERSION:</span>
+                    <span class="footer-value">1.0.0 | OFFLINE MODE</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">PROCESSING...</p>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
+
